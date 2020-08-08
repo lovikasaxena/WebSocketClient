@@ -18,7 +18,8 @@ export default class App extends Component {
         messages: [],
         playerUserNames: []
     }
-    onButtonClicked = (value) => {
+    sendMessage = (value) => {
+        if(value === '') return
         console.log("Button clicked with message: ", value)
         client.send(JSON.stringify({
             type: "message",
@@ -129,7 +130,7 @@ export default class App extends Component {
                                         value={this.state.searchVal}
                                         size="large"
                                         onChange={(e) => this.setState({searchVal: e.target.value})}
-                                        onSearch={value => this.onButtonClicked(value)}
+                                        onSearch={value => this.sendMessage(value)}
                                     >
                                     </Search>
                                 </div>
