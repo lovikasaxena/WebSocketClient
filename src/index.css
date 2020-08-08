@@ -19,3 +19,37 @@
     left: 0;
     bottom: 0;
 }
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    /*align-self: flex-end;*/
+    flex: 1;
+}
+
+.comment-box {
+    position: fixed;
+    width: 400px;
+    background-color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    top: 150px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.answer-input {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    padding-bottom: 10px;
+    width: 400px;
+}
